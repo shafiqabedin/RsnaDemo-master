@@ -1,0 +1,72 @@
+<div>
+
+
+	<carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+		<slide *ngFor="let question of questions; let index=index;" [active]="question.active">
+			<img (click)="checkUserStatus()" (click)="selectQuestion(question)" [src]="question.questionDisplayImage.image" style="margin:auto;">
+		</slide>
+	</carousel>
+
+	<h1>Select A Case For Analysis</h1>
+</div>
+<div id="carouselBg"></div>
+<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<!--<button type="button" class="close" (click)="smModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>-->
+				<h3 class="modal-title">Eyes of FooBar</h3>
+				<h4 class="modal-info">Please tell us who you are</h4>
+				<h4 *ngIf=showLoginErrorMsg class="modal-info" style="color: red;">Incorrect Username & Password</h4>
+			</div>
+			<div class="modal-body">
+				<table>
+					<tr>
+						<td>
+							<label>Username</label>
+						</td>
+						<td>
+							<input type="userid" [(ngModel)]="inputUsername" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Password</label>
+						</td>
+						<td>
+							<input type="password" [(ngModel)]="inputPassword" (keyup.enter)="authenticate(inputUsername, inputPassword)" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Experience</label>
+						</td>
+						<td>
+							<input  [(ngModel)]="specialityInput">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Sub Specialty</label>
+						</td>
+						<td>
+							<input [(ngModel)]="subspecialityInput">
+						</td>
+					</tr>					
+					<tr>
+						<td>
+						</td>
+						<td>
+							<button (click)= "authenticate(inputUsername, inputPassword)">Submit</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<img src="/images/eyeanimation_300_static.gif" alt="Eyes of FooBar" />
+</footer>

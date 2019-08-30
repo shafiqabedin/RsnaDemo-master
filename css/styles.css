@@ -1,0 +1,127 @@
+/*
+ * Copyright (c) 2016, acme and/or its affiliates. All rights reserved.
+ */
+
+/**
+ * The ControllerLoader is the class that 
+ * loads controls for the 3D elements 
+ *
+ * @author Shafiq Abedin
+ * @version 1.0
+ * @since 2016-07-12
+ */
+
+h1 {
+  color: #369; 
+  font-family: Arial, Helvetica, sans-serif;   
+  font-size: 250%;
+}
+h2, h3 { 
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;   
+  font-weight: lighter;
+}
+body { 
+  margin: 1em; 
+}
+body, input[text], button { 
+  color: #888; 
+  font-family: Cambria, Georgia; 
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa; 
+  cursor: auto;
+}
+
+/* Tooltip styling */
+.tooltip {
+    font-size: 12px;
+    border-radius: 8px;
+    border: 1px solid darkorange;
+    padding: 10px; 
+    background-color: orange;
+    color: black;
+    position: absolute;
+    opacity: 0.8;
+    display: none;
+}
+/*.tooltip span {
+    display:none;
+}
+.tooltip:hover span {
+    
+}*/
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.router-link-active {
+  color: #039be5;
+}
+
+/*Container div styles*/
+
+.visualization-container {
+    border: none;
+    /*border: 1px solid blue;*/
+}
+
+.visualization-loader-div {
+    border-radius: 8px;
+    border: 1px solid #e1e8f0;
+    padding: 10px; 
+    background-color: #e1e8f0;
+    color: black;
+    position: relative;
+    /*height: 100%;*/
+    /*width: 400px;*/
+}
+.controller-loader-div {
+    font-size: 12px;
+    border-radius: 8px;
+    border: 1px solid #9068be;
+    margin: 10px;     
+    padding: 10px; 
+    background-color: #9068be;
+    color: white;
+    position: absolute;
+    right: 20px;
+    width: 100px;
+    top: 105px;    
+    opacity: 0.7;
+}
+
+/* Everywhere else */
+* { 
+  font-family: Arial, Helvetica, sans-serif; 
+}

@@ -1,0 +1,61 @@
+  
+  .insetGlow {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1) inset;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    margin-bottom: 200px;
+    margin-top: 200px;
+    margin-left: 200px;
+    border-radius: 5px;
+    }
+    .specialityBreast {
+      background: linear-gradient(135deg, rgba(171, 26, 134, 0.14), rgba(171, 26, 134, 0.46));
+      position: relative;
+      color: white;      
+      width: 400px;
+      height: 400px;
+      border: 3px solid white;
+      border-radius: 5px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); 
+    }
+    .specialityBreast:hover {
+      cursor: pointer;
+    }
+    .specialityCardiac {
+      background: linear-gradient(135deg, rgba(171, 26, 134, 0.14), rgba(171, 26, 134, 0.46)); 
+      position: relative;
+      color: white;      
+      width: 400px;
+      height: 400px;
+      border: 3px solid white;
+      border-radius: 5px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); 
+    }
+    .specialityCardiac:hover {
+      cursor: pointer;
+        }
+      .specialityTitle {
+        color: white;
+        font-size: 40px;
+        position: relative;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .specialityTitle:hover {
+        cursor: pointer;
+      }
+      .specialityIcon {
+        position: relative;
+        margin-left: 50px;
+      }
+#specialityBg {
+  background-image: url('/images/bkgd_results_solid.png');
+  background-size: cover;
+  position: fixed;
+  min-height: 800px;
+  top: 1px;
+  width: 100%;
+  z-index: -1;
+}

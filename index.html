@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script>document.write('<base href="/" />');</script>
+	<!--<base href="">-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RSNA Exam</title>
+	<!-- Load libraries -->
+
+	<!-- Load GoogleChart libraries -->
+	<!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<!-- Polyfill(s) for older browsers -->
+	<script src="node_modules/core-js/client/shim.min.js"></script>
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/reflect-metadata/Reflect.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<!-- Configure SystemJS -->
+	<script src="systemjs.config.js"></script>
+	<script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+	<!--Load Styles-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/speciality.component.css">
+	<link rel="stylesheet" type="text/css" href="css/main.component.css">
+	<link rel="stylesheet" type="text/css" href="css/carousel.component.css">
+
+	<!--Load Three.js Libraries-->
+	<script src='js/libs/inflate.min.js'></script>
+	<script src="js/three.js"></script>
+	<script src="js/controls/TrackballControls.js"></script>
+	<script src="js/loaders/VTKLoader.js"></script>
+	<script src="js/Detector.js"></script>
+	<script src="js/libs/stats.min.js"></script>
+	<script src="js/libs/tween.min.js"></script>
+
+	<!-- Load ng2-bootstrap libraries -->
+	<script src="node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<my-app>Loading...</my-app>
+</body>
+
+</html>

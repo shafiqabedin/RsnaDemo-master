@@ -1,0 +1,17 @@
+<p>{{selectedQuestion.questionText}}
+</p>
+<div *ngIf="imageThumb" class="imageBox">
+	<img *ngFor="let mediaUrl of selectedQuestion.questionMediaUrls" src="{{mediaUrl}}">
+</div>
+<p *ngIf="!answerState" class="instructiveText">Please select your answer</p>
+<p *ngIf="answerState" class="instructiveText">You answered</p>
+<ul *ngIf="chooseAnswer" class="answers" [class.unanswered]="!answerState">
+	<li *ngFor="let answer of selectedQuestion.answerChoices; let iIndex = index">
+		<span [class.selected]="answerState === iIndex + 1" (click)="setAnswerState(iIndex + 1)">{{getAlphaFromOrdinal(iIndex + 1)}}{{answer}}</span>
+	</li>
+</ul>
+<ul *ngIf="disableAnswer" class="answers" [class.disabled]="!answerState">
+	<li *ngFor="let answer of selectedQuestion.answerChoices; let iIndex = index">
+		<span>{{getAlphaFromOrdinal(iIndex + 1)}}{{answer}}</span>
+	</li>
+</ul>

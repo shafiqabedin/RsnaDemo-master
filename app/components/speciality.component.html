@@ -1,0 +1,19 @@
+ <!--
+specialityBreast is image that acts as button with breastClick, routes to breast component
+specialityCardiac is image that acts as button with cardiacClick, routes to cardiac component 
+-->
+<div>
+    <div class="insetGlow">
+        <div class="specialityBreast" (click)="breastClick($event)">
+                <p class="specialityTitle">Women's Imaging</p>
+                <img class="specialityIcon" src="/images/radiologyIcon.svg">
+        </div>
+    </div>
+    <div class="insetGlow">
+        <div class="specialityCardiac" (click)="cardiacClick($event)">
+                <p class="specialityTitle">Cardiothoracic</p>
+                <img class="specialityIcon" src="/images/cardiologyIcon.svg">
+        </div>
+    </div>
+</div>
+<div id="specialityBg"></div>

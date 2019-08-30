@@ -1,0 +1,111 @@
+<main [@flyInOut]="'in'">
+	<aside class="left" [class.initial]="showAnalysisImages">
+		<my-question [questionImage]="showQuestionImage" [disable]="navState"></my-question>
+	</aside>
+	<div class="middle" [class.initial]="showAnalysisImages" [class.decision]="subState ==='decide'">
+
+		<div *ngIf="showAnalysisImages">
+			<div class="middleImages">
+				<img *ngIf="isBreast && selectedQuestion.questionDisplayImage" style="max-height: 800px; max-width: 800px;" src="{{selectedQuestion.questionDisplayImage.image}}">
+				<!--<drawble-image [content]=drawableImage></drawble-image>-->
+				<div *ngIf="isCardiac" style="margin: auto;">
+					<scrollable-image [content]=displayData></scrollable-image>
+				</div>
+			</div>
+		</div>
+
+		<div *ngIf="subState ==='text'" class="textContainer">
+			<text-visualization [content]=textVisualizationData></text-visualization>
+		</div>
+
+		<div *ngIf="subState ==='images'" class="imagesContainer">
+			<image-slider [content]=imageVisualizationData></image-slider>
+		</div>
+
+		<div *ngIf="subState ==='diagnosis'" class="sankeyContainer">
+		<!--	<h1>Reasoning Diagram</h1> -->
+			<sankey-visualization [content]=reasoningVisualizationData></sankey-visualization>
+		</div>
+
+		<div *ngIf="subState ==='decide'" class="decision">
+			<h1>FooBar answers:</h1>
+			<h2>{{selectedAnswerData.selectedAnswers}}</h2>
+			<button class="grade" (click)="homeClick($event)">Next Case</button>
+		<!--	<button class="" (click)="survey($event)">Evaluate FooBar</button><br/>		-->	
+		</div>
+	</div>
+	<aside *ngIf="showRightAside" class="right">
+		<div class="topBox">
+			<h2>Patient Case Analysis</h2>
+			<ul>
+				<li *ngFor="let feature of textVisualizationData.patientCaseAnalysisData.features;">
+					<label>{{feature[0]}}</label>
+					<span>{{feature[1]}} {{feature[2]}}</span>
+				</li>
+			</ul>
+
+		</div>
+		<div class="midBox">
+			<h2>Image Analysis</h2>
+			<ul  *ngIf="showImAnalysis" >
+				<li *ngFor="let feature of imageVisualizationData.imageAnalysisData.features;">
+					<label class="midLabel">{{feature[0]}}</label>
+					<span>{{feature[1]}}</span>
+				</li>
+			</ul>
+		</div>
+		<div class="bottomBox">
+			<h2>FooBar Inference</h2>
+			<barchart-visualization [content]=topRankedDiagnosisData.data></barchart-visualization>
+
+		</div>
+	</aside>
+</main>
+<footer class="specialty">
+	<img src="/images/eyeanimation_300_static.gif" alt="Eyes of FooBar" />
+	<div>
+		<img (click)="homeClick($event)" src="/images/nav_home_0.png" onmousedown="this.src='/images/nav_home_1.png'" />
+	</div>
+	<ul *ngIf="showButton" class="analyzeButton">
+		<li class="one">
+			<div class="two">
+				<div class="three">
+					<div class="four" (click)="startAnalysis($event)">
+						<h1>Ask</h1>
+						<h2>FooBar</h2>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul *ngIf="showNav">
+		<li [class.selected]="subState === 'text'">
+			<div>
+				<div>
+					<div (click)="setSubstate('text')">Analyzing Text</div>
+				</div>
+			</div>
+		</li>
+		<li [class.selected]="subState === 'images'">
+			<div>
+				<div>
+					<div (click)="setSubstate('images')">Analyzing Images</div>
+				</div>
+			</div>
+		</li>
+		<li [class.selected]="subState === 'diagnosis'">
+			<div>
+				<div>
+					<div (click)="setSubstate('diagnosis')">Reasoning</div>
+				</div>
+			</div>
+		</li>
+		<li [class.selected]="subState === 'decide'">
+			<div>
+				<div>
+					<div (click)="setSubstate('decide')">Selecting Answer</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</footer>

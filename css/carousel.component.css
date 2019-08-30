@@ -1,0 +1,205 @@
+html body {
+}
+my-carousel {
+  display: block;
+  height: 750px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  position: relative;
+}
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+div.modal.fade.in {
+    position: relative;
+    top:250px;
+}
+div.modal.fade.in > div.modal-dialog.modal-sm {
+    width: 350px;
+}
+div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content {
+    opacity: .9;
+}
+    div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content > div.modal-header > h3.modal-title {
+        color: #a7b1b7;
+        font-family: "Helvetica Neue";
+        font-size: 2.3em;
+        font-weight: 400;
+        text-align: left;
+    }
+    div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content > div.modal-header{
+        border-bottom: 0px;
+    }
+    div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content > div.modal-header > h4.modal-info {
+        color: #60a1d2;
+        font-family: "Helvetica Neue";
+        font-size: 1.3em;
+        font-weight: normal;
+        text-align: left;
+    }
+    div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content > div.modal-body > div {
+        color: #a7b1b7;
+        font-family: "Helvetica Neue";
+        font-size: .9em;
+        font-weight: normal;
+        text-align: left;
+        padding: 3px;
+    }
+          div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content > div.modal-body > table > tbody > tr > td > label{
+            color: #a7b1b7;
+            font-family: "Helvetica Neue";
+            font-size: 1.0em;
+            font-weight: normal;
+            text-align: left;
+            padding: 2px;
+        }
+    div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content > div.modal-body > table > tbody > tr > td > input {
+        border-radius: 5px;
+        border-style: solid;
+        color: #a7b1b7;
+        font-family: "Helvetica Neue";
+        position: relative;
+        left: 25px;
+        margin-bottom: 14px;
+        margin-right: 30px;
+        padding-right: 16px;
+        text-align: left;
+    }
+div.modal.fade.in > div.modal-dialog.modal-sm > div.modal-content > div.modal-body > table > tbody > tr > td > button {
+    background-color: white;
+    border: 1px solid #a7b1b7;
+    color: #60a1d2;
+    font-family: "Helvetica Neue";
+    font-size: .9em;
+    font-weight: 200; 
+    padding: 2px 20px;
+}
+  my-carousel h1 {
+    top: 10px;
+    color: #60a1d2;
+    font-family: 'Helvetica Neue';
+    font-size: 2.2em;
+    font-weight: 300;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    width: 100%;
+  }
+  my-carousel > div {
+      background-image: url('/images/bkgd_results_trans.png');
+  }
+  my-carousel footer {
+    bottom: 0;
+    padding: 0 0 40px 40px;
+    position: fixed;
+  }
+.carousel {
+    overflow: visible;
+    width: 100%;
+}
+    .carousel .carousel-control {
+      color: #60a1d2;
+      opacity: 1.0;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+      top: 260px;
+      transition: color 0.5s;
+    }
+        .carousel .BUTTONS {
+            position: relative;
+            text-align: center;
+            top: 700px;
+            z-index: 10;
+        }
+            .carousel .BUTTONS > button {
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+                border: 1px solid #ffffff;
+                box-shadow: 0 0 35px rgba(225, 240, 255, 0.7);
+                color: #ffffff;
+                font-family: 'Helvetica Neue';
+                font-size: 20px;
+                font-weight: 200;
+                margin-left: 40px;
+                margin-right: 40px;
+                padding-bottom: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 5px;
+            }
+    .carousel .carousel.slide {
+    }
+        .carousel > .carousel-inner {
+            left: calc(48% - 156px);
+            overflow: visible;
+            -moz-perspective: 800px;
+            -webkit-perspective: 1600px;
+            -moz-perspective-origin: 14% 50%;
+            -webkit-perspective-origin: -50% 50%;
+            position: relative;
+            top: 260px;
+            transform-style: preserve-3d;
+        }
+            .carousel .carousel-inner > .item {
+                display: block;
+                position: relative;
+                top: -160px;
+                transform-style: preserve-3d;
+            }
+            .carousel .carousel-item > .item {
+                border: 3px solid #69c;
+                border-radius: 7px;
+                display: block;
+                position: absolute;
+                transition: all 0.9s ease-in-out;
+            }
+                .carousel .carousel-item > .item.position_0 {
+                    left: -938px;
+                    transform: rotateY(-45deg) translateZ(-299px);
+                    z-index: 0;
+                }
+                .carousel .carousel-item > .item.position_1 {
+                    left: -405px;
+                    transform: rotateY(-25deg) translateZ(0);
+                    z-index: 200;
+                }
+                .carousel .carousel-item > .item.position_2 {
+                    border-color: #fdfdfa;
+                    box-shadow: 0 0 30px rgba(255, 255, 255, 0.95);
+                    cursor: pointer;
+                    left: 0;
+                    transform: translateZ(90px);
+                    z-index: 400;
+                }
+                .carousel .carousel-item > .item.position_3 {
+                    left: 405px;
+                    transform: rotateY(25deg) translateZ(0);
+                    z-index: 200;
+                }
+                .carousel .carousel-item > .item.position_4 {
+                    left: 938px;
+                    transform: rotateY(45deg) translateZ(-299px);
+                    z-index: 0;
+                }
+                .carousel .carousel-item > .item img {
+                    border-radius: 4px;
+                    height: 485px;
+                    width: 400px;
+                }
+#carouselBg {
+  background-image: url('/images/bkgd_results_trans.png');
+  background-size: cover;
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+}
+body footer {
+}
+    body footer > img {
+        float: left;
+        margin-top: 50px;
+    }
